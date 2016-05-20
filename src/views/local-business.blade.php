@@ -24,6 +24,7 @@
         "latitude": <% isset($seo['latitude']) ? $seo['latitude'] : '' %>,
         "longitude": <% isset($seo['longitude']) ? $seo['longitude'] : '' %>
     },
+    @endif
     "contactPoint" : 
     [ 
         {
