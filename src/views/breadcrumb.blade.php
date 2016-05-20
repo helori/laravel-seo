@@ -4,11 +4,12 @@
     "@context": "http://schema.org",
     "@type": "BreadcrumbList",
     "itemListElement": [
-        @foreach($seo['route']['breadcrumb'] as $i => $item)
+        <?php $i = 1; ?>
+        @foreach($seo['route']['breadcrumb'] as $name => $item)
 
             {
                 "@type": "ListItem",
-                "position": <% $i + 1 %>,
+                "position": <% $i %>,
                 "item": {
                     "@id": "<% $item['url'] %>",
                     "name": "<% $item['title'] %>"
@@ -20,6 +21,8 @@
             @if($i < count($seo['route']['breadcrumb']) - 1)
             ,
             @endif
+
+            <?php ++$i; ?>
 
         @endforeach
     ]

@@ -1,5 +1,12 @@
 <?php
 
+//	config params can be set dynamically.
+//	for routes, this can be done in RouteServiceProvider::map as such :
+//
+//	config([
+//		'laravel-seo.routes.home.breadcrumb.home.url' => route('home')
+//	]);
+
 return [
 	'global' => [
 		'title' => '',
@@ -31,7 +38,14 @@ return [
 			'image' => '',
 			'image_w' => '',
 			'image_h' => '',
-			'breadcrumb' => [],
+			'breadcrumb' => [
+				// Can contain multiple items:
+    			'home' => [
+    				//'title' => '', 
+    				//'url' => '',
+    				//'image' => ''
+    			]
+			],
 		]
 	]
 ];
