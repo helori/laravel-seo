@@ -1,8 +1,8 @@
-<title><% isset($seo['title']) ? $seo['title'] : '' %></title>
+<title><% isset($seo['route']['title']) ? $seo['route']['title'] : '' %></title>
 <base href="<% url('/') %>">
 <meta charset="UTF-8" />
-<meta name="description" content="<% isset($seo['description']) ? $seo['description'] : '' %>" />
-<meta name="keywords" content="<% isset($seo['keywords']) ? $seo['keywords'] : '' %>" />
+<meta name="description" content="<% isset($seo['route']['description']) ? $seo['route']['description'] : '' %>" />
+<meta name="keywords" content="<% isset($seo['route']['keywords']) ? $seo['route']['keywords'] : '' %>" />
 <meta name="author" content="<% isset($seo['author']) ? $seo['author'] : '' %>" />
 
 <meta http-equiv="X-UA-Compatible" content="IE=edge" />

@@ -12,12 +12,12 @@ class SeoTools
 		$seo = config('laravel-seo');
 		$route_name = Route::current()->getName();
 		$seo_route = [
-			'title' => isset($seo['title']) ? $seo['title'] : '',
-			'description' => isset($seo['description']) ? $seo['description'] : '',
-			'keywords' => isset($seo['keywords']) ? $seo['keywords'] : '',
-			'image' => isset($seo['image']) ? $seo['image'] : '',
-			'image_w' => isset($seo['image_w']) ? $seo['image_w'] : '',
-			'image_h' => isset($seo['image_h']) ? $seo['image_h'] : '',
+			'title' => isset($seo['global']['title']) ? $seo['global']['title'] : '',
+			'description' => isset($seo['global']['description']) ? $seo['global']['description'] : '',
+			'keywords' => isset($seo['global']['keywords']) ? $seo['global']['keywords'] : '',
+			'image' => isset($seo['global']['image']) ? $seo['global']['image'] : '',
+			'image_w' => isset($seo['global']['image_w']) ? $seo['global']['image_w'] : '',
+			'image_h' => isset($seo['global']['image_h']) ? $seo['global']['image_h'] : '',
 			'breadcrumb' => []
 		];
 		if(isset($seo['routes'][$route_name]))

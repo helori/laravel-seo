@@ -12,11 +12,18 @@
     "address": { 
         "@type": "PostalAddress", 
         "streetAddress": "<% isset($seo['streetAddress']) ? $seo['streetAddress'] : '' %>",
+        "addressLocality": "<% isset($seo['addressLocality']) ? $seo['addressLocality'] : '' %>",
         "addressRegion": "<% isset($seo['addressRegion']) ? $seo['addressRegion'] : '' %>",
         "areaserved" : "<% isset($seo['areaserved']) ? $seo['areaserved'] : '' %>",
         "postalCode": "<% isset($seo['postalCode']) ? $seo['postalCode'] : '' %>"
     }, 
     @endif
+    @if(isset($seo['latitude']) && $seo['latitude'] && isset($seo['longitude']) && $seo['longitude'])
+    "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": <% isset($seo['latitude']) ? $seo['latitude'] : '' %>,
+        "longitude": <% isset($seo['longitude']) ? $seo['longitude'] : '' %>
+    },
     "contactPoint" : 
     [ 
         {
