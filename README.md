@@ -22,7 +22,7 @@ php artisan vendor:publish --provider="Helori\LaravelSeo\SeoServiceProvider" --t
 
 Publish the views if you wish to overwite the defaults:
 ```bash
-php artisan vendor:publish --provider="Helori\LaravelAdmin\AdminServiceProvider" --tag="views"
+php artisan vendor:publish --provider="Helori\LaravelSeo\SeoServiceProvider" --tag="views"
 ```
 
 ## How to use
