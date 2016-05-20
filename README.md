@@ -42,10 +42,10 @@ In your layout, include theses views as needed:
     @include('laravel-seo:meta-twitter')
 </head>
 <body>
-@include('laravel-seo:local-business')
-@include('laravel-seo:organization')
-@include('laravel-seo:website')
-@include('laravel-seo:breadcrumb')
+	@include('laravel-seo:local-business')
+	@include('laravel-seo:organization')
+	@include('laravel-seo:website')
+	@include('laravel-seo:breadcrumb')
 </body>
 ```
 
