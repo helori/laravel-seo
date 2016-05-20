@@ -7,7 +7,7 @@
     @if(isset($seo['search_url']) && $seo['search_url'])
     "potentialAction": {
 	    "@type": "SearchAction",
-	    "target": "<% $seo['search_url'] %>/{search_term_string}",
+	    "target": "<% $seo['search_url'] %>?q={search_term_string}",
 	    "query-input": "required name=search_term_string"
 	}
 	@endif
