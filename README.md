@@ -36,11 +36,11 @@ return view('your_view', ['seo' => $seo]);
 
 In your layout, include theses views as needed:
 ```html
-<meta>
+<head>
 	@include('laravel-seo:meta')
     @include('laravel-seo:meta-facebook')
     @include('laravel-seo:meta-twitter')
-</meta>
+</head>
 <body>
 @include('laravel-seo:local-business')
 @include('laravel-seo:organization')
