@@ -1,0 +1,30 @@
+{
+    "name": "helori/laravel-seo",
+    "description": "SEO tools to insert meta and structured-data in laravel projects",
+    "keywords": ["laravel", "seo", "structured data"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Helori Lanos",
+            "email": "helori@algoart.fr",
+            "homepage": "http://www.algoart.fr"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/helori/laravel-seo.git"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Helori\\LaravelSeo\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "require-dev": {
+        
+    }
+}
