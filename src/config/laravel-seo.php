@@ -33,7 +33,7 @@ return [
 		'twitter_sign' => '@',
 		'latitude' => 0,
 		'longitude' => 0,
-		'search_url' => 'https://query.example.com/search?q=',
+		'search_url' => '',
 	],
 	'routes' => [
 		'home' => [
