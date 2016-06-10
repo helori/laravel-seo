@@ -1,4 +1,4 @@
-# laravel-crudui
+# laravel-seo
 SEO tools to insert meta and structured-data in laravel projects
 
 ## Installation and setup
