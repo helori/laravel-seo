@@ -1,3 +1,4 @@
+@if(isset($seo))
 <script type="application/ld+json"> 
 {
     "@context" : "http://schema.org", 
@@ -40,3 +41,4 @@
     ]
 }
 </script>
+@endif

@@ -1,3 +1,4 @@
+@if(isset($seo))
 <meta property="og:locale" content="fr_FR" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="<% Request::url() %>" />
@@ -9,3 +10,4 @@
 <meta property="og:image:width" content="<% isset($seo['route']['image_w']) ? $seo['route']['image_w'] : '' %>" />
 <meta property="og:image:height" content="<% isset($seo['route']['image_h']) ? $seo['route']['image_h'] : '' %>" />
 <meta property="fb:app_id" content="<% isset($seo['fb_app_id']) ? $seo['fb_app_id'] : '' %>" />
+@endif

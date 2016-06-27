@@ -1,3 +1,4 @@
+@if(isset($seo))
 <title><% $seo['route']['title'] or '' %></title>
 <base href="<% url('/') %>">
 <meta charset="UTF-8" />
@@ -11,3 +12,4 @@
 <meta name="apple-mobile-web-app-status-bar-style" content="white" />
 <link rel="shortcut icon" href="favicon.png" type="image/png" />
 <link rel="canonical" href="<% Request::url() %>">
+@endif

@@ -1,3 +1,4 @@
+@if(isset($seo))
 @if(count($seo['route']['breadcrumb']) > 0)
 <script type="application/ld+json">
 {
@@ -28,4 +29,5 @@
     ]
 }
 </script>
+@endif
 @endif
