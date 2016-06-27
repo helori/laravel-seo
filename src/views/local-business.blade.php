@@ -2,36 +2,36 @@
 {
     "@context" : "http://schema.org", 
     "@type" : "LocalBusiness", 
-    "name": "<% isset($seo['title']) ? $seo['title'] : '' %>",
-    "url" : "<% isset($seo['url']) ? $seo['url'] : '' %>",
-    "description" : "<% isset($seo['description']) ? $seo['description'] : '' %>",
-    "logo" : "<% isset($seo['logo']) ? $seo['logo'] : '' %>",
-    "email": "<% isset($seo['email']) ? $seo['email'] : '' %>",
-    "openingHours": [ "<% isset($seo['openingHours']) ? $seo['openingHours'] : '' %>" ], 
+    "name": "{!! $seo['title'] or '' !!}",
+    "url" : "{!! isset($seo['url']) ? $seo['url'] : '' !!}",
+    "description" : "{!! $seo['description'] or '' !!}",
+    "logo" : "{!! $seo['logo'] or '' !!}",
+    "email": "{!! $seo['email'] or '' !!}",
+    "openingHours": [ "{!! $seo['openingHours'] or '' !!}" ], 
     @if(isset($seo['streetAddress']) && $seo['streetAddress'])
     "address": { 
         "@type": "PostalAddress", 
-        "streetAddress": "<% isset($seo['streetAddress']) ? $seo['streetAddress'] : '' %>",
-        "addressLocality": "<% isset($seo['addressLocality']) ? $seo['addressLocality'] : '' %>",
-        "addressRegion": "<% isset($seo['addressRegion']) ? $seo['addressRegion'] : '' %>",
-        "areaserved" : "<% isset($seo['areaserved']) ? $seo['areaserved'] : '' %>",
-        "postalCode": "<% isset($seo['postalCode']) ? $seo['postalCode'] : '' %>"
+        "streetAddress": "{!! $seo['streetAddress'] or '' !!}",
+        "addressLocality": "{!! $seo['addressLocality'] or '' !!}",
+        "addressRegion": "{!! $seo['addressRegion'] or '' !!}",
+        "areaserved" : "{!! $seo['areaserved'] or '' !!}",
+        "postalCode": "{!! $seo['postalCode'] or '' !!}"
     }, 
     @endif
     @if(isset($seo['latitude']) && $seo['latitude'] && isset($seo['longitude']) && $seo['longitude'])
     "geo": {
         "@type": "GeoCoordinates",
-        "latitude": <% isset($seo['latitude']) ? $seo['latitude'] : '' %>,
-        "longitude": <% isset($seo['longitude']) ? $seo['longitude'] : '' %>
+        "latitude": {!! isset($seo['latitude']) ? $seo['latitude'] : '' !!},
+        "longitude": {!! isset($seo['longitude']) ? $seo['longitude'] : '' !!}
     },
     @endif
     "contactPoint" : 
     [ 
         {
             "@type" : "ContactPoint",
-            "telephone" : "<% isset($seo['phone']) ? $seo['phone'] : '' %>",
-            "contactType" : "<% isset($seo['contactType']) ? $seo['contactType'] : '' %>",
-            "hoursAvailable" : "<% isset($seo['openingHours']) ? $seo['openingHours'] : '' %>",
+            "telephone" : "{!! $seo['phone'] or '' !!}",
+            "contactType" : "{!! $seo['contactType'] or '' !!}",
+            "hoursAvailable" : "{!! $seo['openingHours'] or '' !!}",
             "availableLanguage": {
                 "@type": "Language", 
                 "name": "French"

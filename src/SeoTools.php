@@ -11,6 +11,7 @@ class SeoTools
 	{
 		$seo = config('laravel-seo');
 		$route_name = Route::current()->getName();
+		$locale = $locale = \App::getLocale();
 		$seo_route = [
 			'title' => isset($seo['global']['title']) ? $seo['global']['title'] : '',
 			'description' => isset($seo['global']['description']) ? $seo['global']['description'] : '',
@@ -20,9 +21,9 @@ class SeoTools
 			'image_h' => isset($seo['global']['image_h']) ? $seo['global']['image_h'] : '',
 			'breadcrumb' => []
 		];
-		if(isset($seo['routes'][$route_name]))
+		if(isset($seo['routes'][$locale][$route_name]))
 		{
-			$s = $seo['routes'][$route_name];
+			$s = $seo['routes'][$locale][$route_name];
 			$seo_route['title'] = isset($s['title']) ? $s['title'] : $seo_route['title'];
 			$seo_route['description'] = isset($s['description']) ? $s['description'] : $seo_route['description'];
 			$seo_route['keywords'] = isset($s['keywords']) ? $s['keywords'] : $seo_route['keywords'];
