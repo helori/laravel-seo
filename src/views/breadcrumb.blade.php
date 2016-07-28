@@ -10,12 +10,12 @@
 
             {
                 "@type": "ListItem",
-                "position": <% $i %>,
+                "position": {{ $i }},
                 "item": {
-                    "@id": "<% $item['url'] %>",
+                    "@id": "{{ $item['url'] }}",
                     "name": "{!! $item['title'] !!}"
                     @if(isset($item['image']) && $item['image'])
-                    ,"image": "<% $item['image'] %>"
+                    ,"image": "{{ $item['image'] }}"
                     @endif
                 }
             }
