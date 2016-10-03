@@ -47,6 +47,9 @@ You can also include SEO information directly without using built-in views :
 
 Add SEO information from your controller using the SEO facade. For example :
 ```php
+// ---------------------------------------------------------------------
+//	SEO data shared between views :
+// ---------------------------------------------------------------------
 public function __construct(){
 	Seo::set('global-title', 'Website name');
     Seo::set('global-description', 'Website description');
@@ -87,6 +90,9 @@ public function __construct(){
     Seo::set('twitter-sign', '@My_Twitter_Account');
 }
 
+// ---------------------------------------------------------------------
+//	Page specific SEO data :
+// ---------------------------------------------------------------------
 public function home(){
 	Seo::set('title', 'My home page title');
 	Seo::set('description', "My home page description");
