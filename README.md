@@ -45,7 +45,7 @@ You can also include SEO information directly without using built-in views :
 <meta name="description" content="{{ Seo::get('description') }}" />
 ```
 
-Add SEO information in your controller using the SEO facade. For example :
+Add SEO information from your controller using the SEO facade. For example :
 ```php
 public function __construct(){
 	Seo::set('global-title', 'Website name');
@@ -77,7 +77,6 @@ public function __construct(){
         'available-languages' => ['French']
     ]);
 
-    
     Seo::set('og-locale', 'fr_FR');
     Seo::set('og-image-url', 'facebook_image_url');
     Seo::set('og-image-type', 'image/jpeg');
