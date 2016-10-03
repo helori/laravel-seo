@@ -8,9 +8,7 @@ class SeoServiceProvider extends ServiceProvider
 {
     public function register()
     {
-        $this->mergeConfigFrom(
-            __DIR__.'/config/laravel-seo.php', 'laravel-seo'
-        );
+        $this->app->bind('seo', 'Helori\LaravelSeo\Seo');
     }
     
     public function boot()
@@ -20,9 +18,5 @@ class SeoServiceProvider extends ServiceProvider
 		$this->publishes([
             __DIR__.'/views' => base_path('resources/views/vendor/laravel-seo'),
         ], 'views');
-
-		$this->publishes([
-            __DIR__.'/config/laravel-seo.php' => config_path('laravel-seo.php')
-        ], 'config');
 	}
 }
