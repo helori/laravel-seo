@@ -6,9 +6,9 @@
     "@context" : "http://schema.org",
     "@type" : "WebSite",
     "name" : "{{ Seo::get('global-title') }}",
-    "url" : "{{ url('/') }}",
+    "url" : "{{ url('/') }}"
     @if(Seo::has('search-url'))
-    "potentialAction": {
+    ,"potentialAction": {
         "@type": "SearchAction",
         "target": "{{ Seo::get('search-url') }}?q={search_term_string}",
         "query-input": "required name=search_term_string"

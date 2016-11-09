@@ -1,6 +1,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <!--  Structured Data : BreadcrumbList -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+@if(is_array(Seo::get('breadcrumblist')))
 <script type="application/ld+json">
 {
     "@context": "http://schema.org",
@@ -19,3 +20,4 @@
     ]
 }
 </script>
+@endif
