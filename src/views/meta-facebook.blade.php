@@ -2,8 +2,8 @@
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ Request::url() }}" />
 <meta property="og:site_name" content="{{ Seo::get('global-title') }}" />
-<meta property="og:title" content="{{ Seo::get('title') }}" />
-<meta property="og:description" content="{{ Seo::get('description') }}" />
+<meta property="og:title" content="{{ Seo::get('title') ? Seo::get('title') : Seo::get('global-title') }}" />
+<meta property="og:description" content="{{ Seo::get('description') ? Seo::get('description') : Seo::get('global-description') }}" />
 <meta property="og:image" content="{{ Seo::get('og-image-url') }}" />
 <meta property="og:image:type" content="{{ Seo::get('og-image-type') }}" />
 <meta property="og:image:width" content="{{ Seo::get('og-image-width') }}" />
