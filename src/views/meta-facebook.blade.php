@@ -1,4 +1,4 @@
-<meta property="og:locale" content="{{ \App::getLocale() }}" />
+<meta property="og:locale" content="{{ Seo::get('og-locale') }}" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="{{ Request::url() }}" />
 <meta property="og:site_name" content="{{ Seo::get('global-title') }}" />
