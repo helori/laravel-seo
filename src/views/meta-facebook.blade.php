@@ -16,18 +16,11 @@ $mime = null;
 $w = null;
 $h = null;
 
-$path = Seo::get('image');
-if($path){
-	if(substr($path, 0, 1) !== '/'){
-		$path = '/'.$path;	
-	}
-	if(!is_file(public_path().$path)){
-		$path = Seo::get('global-image');
-		if(substr($path, 0, 1) !== '/'){
-			$path = '/'.$path;	
-		}
-	}
+$path = ((substr(Seo::get('image'), 0, 1) !== '/') ? '/' : '').Seo::get('image');
+if(!is_file(public_path().$path)){
+	$path = ((substr(Seo::get('global-image'), 0, 1) !== '/') ? '/' : '').Seo::get('global-image');
 }
+
 if(is_file(public_path().$path)){
 	$info = getimagesize(public_path().$path);
 	$w = isset($info[0]) ? $info[0] : 0;
