@@ -2,11 +2,8 @@
 <!--  Structured Data : Local Business -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <?php
-$path = ((substr(Seo::get('image'), 0, 1) !== '/') ? '/' : '').Seo::get('image');
+$path = ((substr(Seo::get('global-image'), 0, 1) !== '/') ? '/' : '').Seo::get('global-image');
 if(!is_file(public_path().$path)){
-    $path = ((substr(Seo::get('global-image'), 0, 1) !== '/') ? '/' : '').Seo::get('global-image');
-}
-if(is_file(public_path().$path)){
     $image_url = $path;
 }
 ?>
