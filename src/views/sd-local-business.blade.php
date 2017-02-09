@@ -4,13 +4,15 @@
 <script type="application/ld+json"> 
 {
     "@context" : "http://schema.org", 
-    "@type" : "LocalBusiness", 
+    "@type" : "{{ Seo::get('local-business') ? Seo::get('local-business') : 'LocalBusiness' }}", 
     "name": "{!! Seo::get('global-title') !!}",
     "url" : "{{ url('/') }}",
     "description" : "{!! Seo::get('global-description') !!}",
     "logo" : "{{ Seo::get('logo-url') }}",
     "email": "{{ Seo::get('email') }}",
+    "telephone": "{{ Seo::get('phone') }}",
     "openingHours": [ "{{ Seo::get('opening-hours') }}" ], 
+    "priceRange": "{{ Seo::get('price-range') ? Seo::get('price-range') : '€€' }}",
     "address": { 
         "@type": "PostalAddress", 
         "streetAddress": "{!! Seo::get('street-address') !!}",
