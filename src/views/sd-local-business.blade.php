@@ -1,6 +1,16 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <!--  Structured Data : Local Business -->
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
+<?php
+$path = ((substr(Seo::get('image'), 0, 1) !== '/') ? '/' : '').Seo::get('image');
+if(!is_file(public_path().$path)){
+    $path = ((substr(Seo::get('global-image'), 0, 1) !== '/') ? '/' : '').Seo::get('global-image');
+}
+if(is_file(public_path().$path)){
+    $image_url = $path;
+}
+?>
+
 <script type="application/ld+json"> 
 {
     "@context" : "http://schema.org", 
@@ -28,6 +38,14 @@
         "latitude": {{ Seo::get('latitude') }},
         "longitude": {{ Seo::get('longitude') }}
     },
+    "sameAs" : [
+        @foreach(Seo::similarTo() as $i => $similar)
+            "{{ $similar }}" {{ ($i < count(Seo::similarTo()) - 1) ? ',' : '' }}
+        @endforeach
+    ],
+    @endif
+    @if(isset($image_url))
+    "image" : "{{ asset($image_url) }}",
     @endif
     "contactPoint" : 
     [ 
