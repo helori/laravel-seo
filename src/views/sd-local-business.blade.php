@@ -3,7 +3,7 @@
 <!-- - - - - - - - - - - - - - - - - - - - - - - - - - - - - -->
 <?php
 $path = ((substr(Seo::get('global-image'), 0, 1) !== '/') ? '/' : '').Seo::get('global-image');
-if(!is_file(public_path().$path)){
+if(is_file(public_path().$path)){
     $image_url = $path;
 }
 ?>
