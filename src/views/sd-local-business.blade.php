@@ -13,7 +13,7 @@ if(is_file(public_path().$path)){
     "@context" : "http://schema.org", 
     "@type" : "{{ Seo::get('local-business') ? Seo::get('local-business') : 'LocalBusiness' }}", 
     "name": "{!! Seo::get('global-title') !!}",
-    "url" : "{{ url('/') }}",
+    "url" : "{{ Seo::get('url') ? Seo::get('url') : url('/') }}",
     "description" : "{!! Seo::get('global-description') !!}",
     "logo" : "{{ Seo::get('logo-url') }}",
     "email": "{{ Seo::get('email') }}",
