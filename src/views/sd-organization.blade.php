@@ -5,7 +5,7 @@
 {
     "@context" : "http://schema.org",
     "@type" : "Organization",
-    "url" : "{{ url('/') }}",
+    "url" : "{{ Seo::get('url') ? Seo::get('url') : url('/') }}",
     "logo" : "{{ Seo::get('logo-url') }}",
     "name" : "{!! Seo::get('global-title') !!}",
     "sameAs" : [
