@@ -26,5 +26,15 @@
     },
     "require-dev": {
         
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Helori\\LaravelSeo\\SeoServiceProvider"
+            ],
+            "aliases": {
+                "Seo": "Helori\\LaravelSeo\\Facades\\Seo"
+            }
+        }
     }
 }
